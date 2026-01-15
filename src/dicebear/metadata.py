@@ -324,13 +324,13 @@ Metadata = {
         },
     },
     "toon-head": {
-        "title": 'ToonHead',
-        "creator": 'Johan Melin',
-        "source": 'https://www.figma.com/community/file/1589627891082866389',
-        "homepage": 'https://www.johanmelin.com',
+        "title": "ToonHead",
+        "creator": "Johan Melin",
+        "source": "https://www.figma.com/community/file/1589627891082866389",
+        "homepage": "https://www.johanmelin.com",
         "license": {
-            "name": 'CC BY 4.0',
-            "url": 'https://creativecommons.org/licenses/by/4.0/',
+            "name": "CC BY 4.0",
+            "url": "https://creativecommons.org/licenses/by/4.0/",
         },
     },
 }
