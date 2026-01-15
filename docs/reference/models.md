@@ -125,6 +125,7 @@ For more info check [#styles](../start/customization.md#styles "mention").
 * `rings`
 * `shapes`
 * `thumbs`
+* `toon-head`
 
 
 

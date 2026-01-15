@@ -1,6 +1,6 @@
 # MIT License
 #
-# Copyright (c) 2025 jvherck (on GitHub)
+# Copyright (c) 2026 jvherck (on GitHub)
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -25,4 +25,4 @@ from .errors import *
 from .models import *
 from .utility import *
 
-__version__ = "3.9.3"
+__version__ = "3.9.4"

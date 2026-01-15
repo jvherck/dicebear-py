@@ -41,6 +41,7 @@ All the possible avatar styles.\
 * `rings`
 * `shapes`
 * `thumbs`
+* `toon-head`
 
 ## Base Options
 
@@ -94,6 +95,7 @@ Click the style to see its options.
 * [rings](https://dicebear.com/styles/rings#options)
 * [shapes](https://dicebear.com/styles/shapes#options)
 * [thumbs](https://dicebear.com/styles/thumbs#options)
+* [toon-head](https://dicebear.com/styles/toon-head#options)
 
 ## Formats
 

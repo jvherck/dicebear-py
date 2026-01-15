@@ -7,6 +7,15 @@ If you encounter any bugs or errors, please open an [issue](https://github.com/j
 
 ***
 
+## v3.9.4
+
+2026-01-15
+
+### Added
+- New style [`toon-head`](https://dicebear.vhjan.me/start/customization#styles)
+
+***
+
 ## v3.9.3
 
 2025-03-03

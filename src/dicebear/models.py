@@ -1,6 +1,6 @@
 # MIT License
 #
-# Copyright (c) 2025 jvherck (on GitHub)
+# Copyright (c) 2026 jvherck (on GitHub)
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -174,6 +174,7 @@ class DStyle:
     rings = styles[27]
     shapes = styles[28]
     thumbs = styles[29]
+    toon_head = styles[30]
 
     def __init__(self):
         """Only use `.attribute` to use a style."""
