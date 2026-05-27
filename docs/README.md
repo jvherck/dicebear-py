@@ -14,7 +14,7 @@ description: >-
 ![Supported Python Versions](https://img.shields.io/pypi/pyversions/dicebear) ![GitHub Issues](https://img.shields.io/github/issues/jvherck/dicebear) ![Maintenance](https://img.shields.io/maintenance/yes/2025) ![Version Status](https://img.shields.io/pypi/status/dicebear)
 
 {% hint style="info" %}
-Dicebear's Python package is <mark style="color:green;background-color:green;">up-to-date</mark> with Dicebear's API!{% endhint %}
+Dicebear's Python package is <mark style="color:red;background-color:red;">outdated</mark> with Dicebear's API!{% endhint %}
 
 {% hint style="warning" %}
 Always make sure to update to the latest version to avoid experiencing unresolved bugs!
