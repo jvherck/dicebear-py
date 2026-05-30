@@ -25,4 +25,5 @@ from .errors import *
 from .models import *
 from .utility import *
 
-__version__ = "3.9.4"
+__version__ = "3.9.5a1"
+__api_version__ = "9.x"
