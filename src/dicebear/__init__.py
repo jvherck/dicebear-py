@@ -23,6 +23,8 @@
 from .avatar import *
 from .errors import *
 from .models import *
+from .models import API_VERSION
 from .utility import *
 
-__version__ = "3.9.4"
+__version__ = "3.9.5"
+__api_version__ = API_VERSION

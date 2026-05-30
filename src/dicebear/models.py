@@ -52,7 +52,8 @@ class _FindPil:
 ASCII_LOWERCASE = "abcdef"
 DIGITS = "0123456789"
 TIMEOUT = 30
-X = "https://api.dicebear.com/9.x"
+API_VERSION = "10.x"
+X = "https://api.dicebear.com/" + API_VERSION
 Y = X + "/{}/schema.json"
 
 options = all_options = [

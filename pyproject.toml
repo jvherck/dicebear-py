@@ -1,9 +1,66 @@
 [build-system]
-requires = [
-    "setuptools>=42",
-    "wheel"
-]
+requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "dicebear"
+dynamic = ["version"]
+description = "A python wrapper for DiceBear's avatar generating API."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+    { name = "jvherck", email = "jan@vhjan.me" }
+]
+maintainers = [
+    { name = "jvherck", email = "jan@vhjan.me" }
+]
+requires-python = ">=3.10"
+dependencies = ["requests", "urllib3"]
+keywords = [
+    "python", "dicebear", "avatar", "avatars", "generating", "generation",
+    "generator", "API", "wrapper", "image", "images", "picture", "pictures",
+    "png", "jpg", "svg", "json", "cli", "pillow", "pil", "requests",
+    "adventurer", "adventurer-neutral", "avataaars", "avataaars-neutral",
+    "big-ears", "big-ears-neutral", "big-smile", "bottts", "bottts-neutral",
+    "croodles", "croodles-neutral", "fun-emoji", "icons", "identicon",
+    "initials", "lorelei", "lorelei-neutral", "micah", "miniavs", "notionists",
+    "notionists-neutral", "open-peeps", "personas", "pixel-art",
+    "pixel-art-neutral", "shapes", "thumbs", "toon-head"
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Other Audience",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Operating System :: Unix",
+    "Operating System :: MacOS",
+    "Operating System :: Microsoft :: Windows",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Artistic Software",
+    "Topic :: Games/Entertainment",
+    "Topic :: Multimedia :: Graphics",
+    "Topic :: Other/Nonlisted Topic",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+
+[project.urls]
+Homepage = "https://dicebear.vhjan.me/"
+Documentation = "https://dicebear.vhjan.me/"
+Source = "https://github.com/jvherck/dicebear"
+Tracker = "https://github.com/jvherck/dicebear/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.dynamic]
+version = { attr = "dicebear.__version__" }
 
 [tool.black]
 line-length = 120
