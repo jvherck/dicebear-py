@@ -1,0 +1,41 @@
+name: Regenerate Styles
+
+on:
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Fetch schemas from dicebear/styles
+        run: python scripts/fetch_schemas.py
+
+      - name: Generate style files
+        run: python scripts/generate.py
+
+      - name: Open PR with changes
+        uses: peter-evans/create-pull-request@v7
+        with:
+          title: "chore: regenerate styles from updated schemas"
+          commit-message: "chore: regenerate styles from updated schemas"
+          branch: auto/regenerate-styles
+          delete-branch: true
+          body: |
+            Automated style regeneration triggered manually via workflow_dispatch.
+
+            - Fetched latest JSONs from [dicebear/styles](https://github.com/dicebear/styles)
+            - Regenerated all style files in `src/dicebear/styles/`
+            - Regenerated `src/dicebear/styles/__init__.py`

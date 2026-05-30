@@ -28,7 +28,7 @@ import pathlib
 from ast import literal_eval
 from random import choices
 from string import ascii_lowercase, digits
-from typing import Union
+from typing import Type, Union
 from urllib.parse import quote
 
 import requests as r
@@ -36,6 +36,7 @@ import requests as r
 from .errors import *
 from .models import *
 from .models import _FindPil, _pilcheck, _stats_increase, X, TIMEOUT
+from .styles._base import StyleBase
 
 __all__ = ("DAvatar",)
 __filename__ = "avatar.py"
@@ -48,6 +49,7 @@ except Exception:
         class Image:
             def show(self, _):
                 pass
+
 
     _FindPil.found = False
 
@@ -63,19 +65,19 @@ class DAvatar:
     all_options: list = options
 
     def __init__(
-        self,
-        style: Union[str, DStyle] = None,
-        seed: str = None,
-        *,
-        options: DOptions = None,
-        custom: dict = None,
-        save_to_cache: bool = True,
+            self,
+            style: Union[str, DStyle, Type[StyleBase], StyleBase] = None,
+            seed: str = None,
+            *,
+            options: DOptions = None,
+            custom: dict = None,
+            save_to_cache: bool = True,
     ) -> None:
         """
         Create a new avatar object.
 
-        :param style: class `dicebear.models.DStyle` :: the style of avatar you want to create; check the whole list at https://github.com/jvherck/dicebear#styles
-        :type style: dicebear.models.DStyle
+        :param style: the style of avatar — accepts a StyleBase subclass, an instance, a DStyle attribute, or a plain string
+        :type style: Union[str, DStyle, Type[StyleBase], StyleBase]
         :param seed: class `str` :: the seed for the avatar; the avatar will be edited according to the seed
         :type seed: str
         :param options: class `DOptions` :: the options for the avatar; check the whole list at https://github.com/jvherck/dicebear#base-options
@@ -85,6 +87,21 @@ class DAvatar:
         :param save_to_cache: `class: bool` :: whether to cache the avatar for quicker future access or manipulation, as well as reducing the amount of API calls
         :type custom: bool
         """
+        if isinstance(style, StyleBase):
+            if custom:
+                raise TypeError(
+                    "Pass either a StyleBase instance or a custom dict, not both. "
+                    "Use style.to_dict() to convert to a dict first."
+                )
+            custom = style.to_dict()
+            style = style.style_name
+        elif isinstance(style, type) and issubclass(style, StyleBase):
+            if custom:
+                raise TypeError(
+                    "Pass either a StyleBase class or a custom dict, not both. "
+                    "Use StyleClass(...).to_dict() to convert to a dict first."
+                )
+            style = style.style_name
         if style is None:
             style = DStyle.random()
         if style not in styles:
@@ -307,18 +324,18 @@ class DAvatar:
         return path
 
     def edit(
-        self,
-        *,
-        style: DStyle = None,
-        seed: str = None,
-        extra_options: DOptions = None,
-        blank_options: DOptions = None,
+            self,
+            *,
+            style: Union[str, DStyle, Type[StyleBase], StyleBase] = None,
+            seed: str = None,
+            extra_options: DOptions = None,
+            blank_options: DOptions = None,
     ) -> str:
         """
         Edit an already existing avatar.
 
-        :param style: class `DStyle` :: edit the avatar's style (style of drawing)
-        :type style: dicebear.models.DStyle
+        :param style: edit the avatar's style — accepts a StyleBase subclass, an instance, a DStyle attribute, or a plain string
+        :type style: Union[str, DStyle, Type[StyleBase], StyleBase]
         :param seed: class `str` :: edit the avatar's seed (string to determine its looks)
         :type seed: str
         :param extra_options: class `DOptions` :: edit the avatar's options (old options stay, these get added) -- cannot be used at the same time with `blank_options` !
@@ -328,6 +345,11 @@ class DAvatar:
         :return: class `str` :: returns the link to the avatar url (svg)
         """
         _stats_increase(__filename__, self.__class__.__name__, ".edit()")
+        if isinstance(style, StyleBase):
+            self.__specific = style.to_dict()
+            style = style.style_name
+        elif isinstance(style, type) and issubclass(style, StyleBase):
+            style = style.style_name
         if style:
             self.__style = style
         if seed:
@@ -360,13 +382,13 @@ class DAvatar:
     customize: callable = customise
 
     def save(
-        self,
-        *,
-        location: Union[pathlib.Path, str] = None,
-        file_name: str = "dicebear_avatar",
-        file_format: DFormat = DFormat.svg,
-        overwrite: bool = False,
-        open_after_save: bool = False,
+            self,
+            *,
+            location: Union[pathlib.Path, str] = None,
+            file_name: str = "dicebear_avatar",
+            file_format: DFormat = DFormat.svg,
+            overwrite: bool = False,
+            open_after_save: bool = False,
     ) -> str:
         """
         Save the avatar to your device.

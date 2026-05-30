@@ -24,7 +24,8 @@ from .avatar import *
 from .errors import *
 from .models import *
 from .models import API_VERSION
+from .styles import *
 from .utility import *
 
-__version__ = "3.9.5"
+__version__ = "4.0.0b1"
 __api_version__ = API_VERSION

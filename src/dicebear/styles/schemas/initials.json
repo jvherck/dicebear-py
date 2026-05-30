@@ -1,0 +1,186 @@
+{
+  "$schema": "https://cdn.hopjs.net/npm/@dicebear/schema@1.0.0/dist/definition.min.json",
+  "meta": {
+    "license": {
+      "name": "CC0 1.0",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "text": "„Initials” (https://www.dicebear.com) by „DiceBear”, licensed under „CC0 1.0” (https://creativecommons.org/publicdomain/zero/1.0/)"
+    },
+    "creator": {
+      "name": "DiceBear",
+      "url": "https://www.dicebear.com"
+    },
+    "source": {
+      "name": "Initials",
+      "url": "https://www.dicebear.com"
+    }
+  },
+  "canvas": {
+    "elements": [
+      {
+        "type": "component",
+        "name": "initials"
+      }
+    ],
+    "width": 100,
+    "height": 100
+  },
+  "components": {
+    "initials": {
+      "height": 100,
+      "width": 100,
+      "variants": {
+        "alt": {
+          "weight": 0,
+          "elements": [
+            {
+              "name": "letters",
+              "type": "component"
+            }
+          ]
+        },
+        "default": {
+          "elements": [
+            {
+              "name": "g",
+              "type": "element",
+              "attributes": {
+                "style": "mix-blend-mode:overlay"
+              },
+              "children": [
+                {
+                  "name": "letters",
+                  "type": "component"
+                }
+              ]
+            },
+            {
+              "name": "g",
+              "type": "element",
+              "attributes": {
+                "opacity": "0.5"
+              },
+              "children": [
+                {
+                  "name": "letters",
+                  "type": "component"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "letters": {
+      "height": 100,
+      "width": 100,
+      "variants": {
+        "single": {
+          "weight": 0,
+          "elements": [
+            {
+              "type": "element",
+              "name": "text",
+              "attributes": {
+                "x": "50%",
+                "y": "50%",
+                "font-family": {
+                  "type": "variable",
+                  "name": "fontFamily"
+                },
+                "font-weight": {
+                  "type": "variable",
+                  "name": "fontWeight"
+                },
+                "font-size": "50",
+                "fill": {
+                  "type": "color",
+                  "name": "text"
+                },
+                "text-anchor": "middle",
+                "dy": "17.8"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": {
+                    "type": "variable",
+                    "name": "initial"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "double": {
+          "weight": 1,
+          "elements": [
+            {
+              "type": "element",
+              "name": "text",
+              "attributes": {
+                "x": "50%",
+                "y": "50%",
+                "font-family": {
+                  "type": "variable",
+                  "name": "fontFamily"
+                },
+                "font-weight": {
+                  "type": "variable",
+                  "name": "fontWeight"
+                },
+                "font-size": "50",
+                "fill": {
+                  "type": "color",
+                  "name": "text"
+                },
+                "text-anchor": "middle",
+                "dy": "17.8"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": {
+                    "type": "variable",
+                    "name": "initials"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "colors": {
+    "background": {
+      "values": [
+        "#c44f4f",
+        "#ac6039",
+        "#8e6e2f",
+        "#777728",
+        "#627e2a",
+        "#48822b",
+        "#2d862d",
+        "#2b8248",
+        "#2b8265",
+        "#2a7e7e",
+        "#347a9d",
+        "#4b73c3",
+        "#6a6acd",
+        "#825ec9",
+        "#9f53c6",
+        "#bb3ebb",
+        "#c14497",
+        "#c34b73"
+      ]
+    },
+    "text": {
+      "values": [
+        "#ffffff",
+        "#000000"
+      ],
+      "contrastTo": "background"
+    }
+  }
+}
