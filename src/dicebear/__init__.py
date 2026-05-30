@@ -26,5 +26,5 @@ from .models import *
 from .models import API_VERSION
 from .utility import *
 
-__version__ = "3.9.5a1"
+__version__ = "3.9.5a2"
 __api_version__ = API_VERSION
