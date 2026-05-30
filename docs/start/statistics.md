@@ -17,4 +17,4 @@ os.environ['ENABLE_PYTHON_DICEBEAR_USAGE_STATS'] = 'true'
 
 Enabling usage stats will cost performance because it will ping an API for most Dicebear functions you use, but this performance cost should be very minimal.
 
-You can also open a [discussion](https://github.com/jvherck/dicebear/discussions) or [issue](https://github.com/jvherck/dicebear/issues) on the [GitHub repo](https://github.com/jvherck/dicebear) to express your thoughts or ideas.
+You can also open a [discussion](https://github.com/jvherck/dicebear-py/discussions) or [issue](https://github.com/jvherck/dicebear-py/issues) on the [GitHub repo](https://github.com/jvherck/dicebear-py) to express your thoughts or ideas.

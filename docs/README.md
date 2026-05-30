@@ -124,4 +124,4 @@ Special thanks to [DiceBear](https://github.com/dicebear) ([Florian Körner](htt
 
 * Dicebear **Licenses**: [https://dicebear.com/licenses](https://dicebear.com/licenses)
 * Dicebear **Privacy Policy**: [https://dicebear.com/legal/privacy-policy](https://dicebear.com/legal/privacy-policy)
-* Dicebear Python API wrapper (this project): [https://jvh.gitbook.io/dicebear/license/](https://jvh.gitbook.io/dicebear/license/)
+* Dicebear Python API wrapper (this project): [https://dicebear.vhjan.me/license/](https://dicebear.vhjan.me/license/)
