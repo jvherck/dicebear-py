@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "dicebear"
 dynamic = ["version"]
-description = "A python wrapper for DiceBear's avatar generating API."
+description = "Python library for generating DiceBear avatars locally."
 readme = "README.md"
 license = { text = "MIT" }
 authors = [
@@ -15,11 +15,13 @@ maintainers = [
     { name = "jvherck", email = "jan@vhjan.me" }
 ]
 requires-python = ">=3.10"
-dependencies = ["requests", "urllib3"]
+dependencies = [
+    "dicebear-styles>=10.1.0",
+]
 keywords = [
     "python", "dicebear", "avatar", "avatars", "generating", "generation",
-    "generator", "API", "wrapper", "image", "images", "picture", "pictures",
-    "png", "jpg", "svg", "json", "cli", "pillow", "pil", "requests",
+    "generator", "image", "images", "picture", "pictures", "offline", "local",
+    "svg", "png", "jpg", "json",
     "adventurer", "adventurer-neutral", "avataaars", "avataaars-neutral",
     "big-ears", "big-ears-neutral", "big-smile", "bottts", "bottts-neutral",
     "croodles", "croodles-neutral", "fun-emoji", "icons", "identicon",
@@ -28,7 +30,7 @@ keywords = [
     "pixel-art-neutral", "shapes", "thumbs", "toon-head"
 ]
 classifiers = [
-    "Development Status :: 5 - Production/Stable",
+    "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
     "Intended Audience :: Other Audience",
     "Natural Language :: English",
@@ -48,6 +50,12 @@ classifiers = [
     "Topic :: Multimedia :: Graphics",
     "Topic :: Other/Nonlisted Topic",
     "Topic :: Software Development :: Libraries :: Python Modules"
+]
+
+[project.optional-dependencies]
+pillow = [
+    "cairosvg>=2.7.0",
+    "Pillow>=10.0.0",
 ]
 
 [project.urls]
