@@ -66,12 +66,12 @@ class CroodlesNeutral(StyleBase):
         C000000 = "#000000"
 
     def __init__(
-            self,
-            eyes: Eyes | str | None = None,
-            mouth: Mouth | str | None = None,
-            nose: Nose | str | None = None,
-            eyepatchColor: EyepatchColor | str | None = None,
-            glassesColor: GlassesColor | str | None = None,
+        self,
+        eyes: Eyes | str | None = None,
+        mouth: Mouth | str | None = None,
+        nose: Nose | str | None = None,
+        eyepatchColor: EyepatchColor | str | None = None,
+        glassesColor: GlassesColor | str | None = None,
     ) -> None:
         super().__init__(
             eyes=eyes,

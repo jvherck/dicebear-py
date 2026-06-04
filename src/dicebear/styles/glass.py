@@ -21,10 +21,10 @@ class Glass(StyleBase):
         T = "t"
 
     def __init__(
-            self,
-            shape: Shape | str | None = None,
-            shape01: Shape | str | None = None,
-            shape02: Shape | str | None = None,
+        self,
+        shape: Shape | str | None = None,
+        shape01: Shape | str | None = None,
+        shape02: Shape | str | None = None,
     ) -> None:
         super().__init__(
             shape=shape,

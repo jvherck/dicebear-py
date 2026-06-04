@@ -25,10 +25,10 @@ class Disco(StyleBase):
         CFFFFFF = "#ffffff"
 
     def __init__(
-            self,
-            pattern: Pattern | str | None = None,
-            shape: Shape | str | None = None,
-            shapeColor: ShapeColor | str | None = None,
+        self,
+        pattern: Pattern | str | None = None,
+        shape: Shape | str | None = None,
+        shapeColor: ShapeColor | str | None = None,
     ) -> None:
         super().__init__(
             pattern=pattern,

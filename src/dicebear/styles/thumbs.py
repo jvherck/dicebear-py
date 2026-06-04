@@ -49,14 +49,14 @@ class Thumbs(StyleBase):
         CF88C49 = "#f88c49"
 
     def __init__(
-            self,
-            body: Body | str | None = None,
-            eyes: Eyes | str | None = None,
-            head: Head | str | None = None,
-            mouth: Mouth | str | None = None,
-            eyesColor: EyesColor | str | None = None,
-            mouthColor: MouthColor | str | None = None,
-            shapeColor: ShapeColor | str | None = None,
+        self,
+        body: Body | str | None = None,
+        eyes: Eyes | str | None = None,
+        head: Head | str | None = None,
+        mouth: Mouth | str | None = None,
+        eyesColor: EyesColor | str | None = None,
+        mouthColor: MouthColor | str | None = None,
+        shapeColor: ShapeColor | str | None = None,
     ) -> None:
         super().__init__(
             body=body,

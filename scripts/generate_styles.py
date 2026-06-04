@@ -200,9 +200,9 @@ def generate_style_source(style_name: str, schema: dict, ver: str) -> str:
         ]
     else:
         lines.append("    def __init__(")
-        lines.append("            self,")
+        lines.append("        self,")
         for p in params:
-            lines.append(f"            {p},")
+            lines.append(f"        {p},")
         lines.append("    ) -> None:")
         lines.append("        super().__init__(")
         for kw in super_kwargs:

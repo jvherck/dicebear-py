@@ -48,13 +48,13 @@ class Dylan(StyleBase):
         CFFD6C0 = "#ffd6c0"
 
     def __init__(
-            self,
-            facialHair: FacialHair | str | None = None,
-            facialHairProbability: int | None = None,
-            hair: Hair | str | None = None,
-            mood: Mood | str | None = None,
-            hairColor: HairColor | str | None = None,
-            skinColor: SkinColor | str | None = None,
+        self,
+        facialHair: FacialHair | str | None = None,
+        facialHairProbability: int | None = None,
+        hair: Hair | str | None = None,
+        mood: Mood | str | None = None,
+        hairColor: HairColor | str | None = None,
+        skinColor: SkinColor | str | None = None,
     ) -> None:
         super().__init__(
             facialHair=facialHair,

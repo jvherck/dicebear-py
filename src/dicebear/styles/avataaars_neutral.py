@@ -57,11 +57,11 @@ class AvataaarsNeutral(StyleBase):
         DEFAULT = "default"
 
     def __init__(
-            self,
-            eyebrows: Eyebrows | str | None = None,
-            eyes: Eyes | str | None = None,
-            mouth: Mouth | str | None = None,
-            nose: Nose | str | None = None,
+        self,
+        eyebrows: Eyebrows | str | None = None,
+        eyes: Eyes | str | None = None,
+        mouth: Mouth | str | None = None,
+        nose: Nose | str | None = None,
     ) -> None:
         super().__init__(
             eyebrows=eyebrows,

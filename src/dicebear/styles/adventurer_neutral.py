@@ -95,12 +95,12 @@ class AdventurerNeutral(StyleBase):
         VARIANT30 = "variant30"
 
     def __init__(
-            self,
-            eyebrows: Eyebrows | str | None = None,
-            eyes: Eyes | str | None = None,
-            glasses: Glasses | str | None = None,
-            glassesProbability: int | None = None,
-            mouth: Mouth | str | None = None,
+        self,
+        eyebrows: Eyebrows | str | None = None,
+        eyes: Eyes | str | None = None,
+        glasses: Glasses | str | None = None,
+        glassesProbability: int | None = None,
+        mouth: Mouth | str | None = None,
     ) -> None:
         super().__init__(
             eyebrows=eyebrows,

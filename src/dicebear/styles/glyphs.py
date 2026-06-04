@@ -57,9 +57,9 @@ class Glyphs(StyleBase):
         CAF61F2 = "#af61f2"
 
     def __init__(
-            self,
-            shape: Shape | str | None = None,
-            glyphColor: GlyphColor | str | None = None,
+        self,
+        shape: Shape | str | None = None,
+        glyphColor: GlyphColor | str | None = None,
     ) -> None:
         super().__init__(
             shape=shape,

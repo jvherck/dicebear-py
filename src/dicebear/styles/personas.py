@@ -105,18 +105,18 @@ class Personas(StyleBase):
         C623D36 = "#623d36"
 
     def __init__(
-            self,
-            clothes: Clothes | str | None = None,
-            eyes: Eyes | str | None = None,
-            facialHair: FacialHair | str | None = None,
-            facialHairProbability: int | None = None,
-            hair: Hair | str | None = None,
-            mouth: Mouth | str | None = None,
-            nose: Nose | str | None = None,
-            clothingColor: ClothingColor | str | None = None,
-            facialHairColor: FacialHairColor | str | None = None,
-            hairColor: HairColor | str | None = None,
-            skinColor: SkinColor | str | None = None,
+        self,
+        clothes: Clothes | str | None = None,
+        eyes: Eyes | str | None = None,
+        facialHair: FacialHair | str | None = None,
+        facialHairProbability: int | None = None,
+        hair: Hair | str | None = None,
+        mouth: Mouth | str | None = None,
+        nose: Nose | str | None = None,
+        clothingColor: ClothingColor | str | None = None,
+        facialHairColor: FacialHairColor | str | None = None,
+        hairColor: HairColor | str | None = None,
+        skinColor: SkinColor | str | None = None,
     ) -> None:
         super().__init__(
             clothes=clothes,

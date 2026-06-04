@@ -100,15 +100,15 @@ class Bottts(StyleBase):
         C879198 = "#879198"
 
     def __init__(
-            self,
-            eyes: Eyes | str | None = None,
-            head: Head | str | None = None,
-            mouth: Mouth | str | None = None,
-            sides: Sides | str | None = None,
-            texture: Texture | str | None = None,
-            textureProbability: int | None = None,
-            top: Top | str | None = None,
-            baseColor: BaseColor | str | None = None,
+        self,
+        eyes: Eyes | str | None = None,
+        head: Head | str | None = None,
+        mouth: Mouth | str | None = None,
+        sides: Sides | str | None = None,
+        texture: Texture | str | None = None,
+        textureProbability: int | None = None,
+        top: Top | str | None = None,
+        baseColor: BaseColor | str | None = None,
     ) -> None:
         super().__init__(
             eyes=eyes,

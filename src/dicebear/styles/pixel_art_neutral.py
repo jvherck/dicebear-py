@@ -88,14 +88,14 @@ class PixelArtNeutral(StyleBase):
         CDE0F0D = "#de0f0d"
 
     def __init__(
-            self,
-            eyes: Eyes | str | None = None,
-            glasses: Glasses | str | None = None,
-            glassesProbability: int | None = None,
-            mouth: Mouth | str | None = None,
-            eyesColor: EyesColor | str | None = None,
-            glassesColor: GlassesColor | str | None = None,
-            mouthColor: MouthColor | str | None = None,
+        self,
+        eyes: Eyes | str | None = None,
+        glasses: Glasses | str | None = None,
+        glassesProbability: int | None = None,
+        mouth: Mouth | str | None = None,
+        eyesColor: EyesColor | str | None = None,
+        glassesColor: GlassesColor | str | None = None,
+        mouthColor: MouthColor | str | None = None,
     ) -> None:
         super().__init__(
             eyes=eyes,

@@ -45,9 +45,9 @@ class FunEmoji(StyleBase):
         WIDE_SMILE = "wideSmile"
 
     def __init__(
-            self,
-            eyes: Eyes | str | None = None,
-            mouth: Mouth | str | None = None,
+        self,
+        eyes: Eyes | str | None = None,
+        mouth: Mouth | str | None = None,
     ) -> None:
         super().__init__(
             eyes=eyes,

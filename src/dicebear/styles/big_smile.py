@@ -79,15 +79,15 @@ class BigSmile(StyleBase):
         C643D19 = "#643d19"
 
     def __init__(
-            self,
-            accessories: Accessories | str | None = None,
-            accessoriesProbability: int | None = None,
-            eyes: Eyes | str | None = None,
-            hair: Hair | str | None = None,
-            head: Head | str | None = None,
-            mouth: Mouth | str | None = None,
-            hairColor: HairColor | str | None = None,
-            skinColor: SkinColor | str | None = None,
+        self,
+        accessories: Accessories | str | None = None,
+        accessoriesProbability: int | None = None,
+        eyes: Eyes | str | None = None,
+        hair: Hair | str | None = None,
+        head: Head | str | None = None,
+        mouth: Mouth | str | None = None,
+        hairColor: HairColor | str | None = None,
+        skinColor: SkinColor | str | None = None,
     ) -> None:
         super().__init__(
             accessories=accessories,

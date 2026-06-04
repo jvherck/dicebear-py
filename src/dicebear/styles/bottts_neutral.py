@@ -48,11 +48,11 @@ class BotttsNeutral(StyleBase):
         GRUNGE02 = "grunge02"
 
     def __init__(
-            self,
-            eyes: Eyes | str | None = None,
-            mouth: Mouth | str | None = None,
-            texture: Texture | str | None = None,
-            textureProbability: int | None = None,
+        self,
+        eyes: Eyes | str | None = None,
+        mouth: Mouth | str | None = None,
+        texture: Texture | str | None = None,
+        textureProbability: int | None = None,
     ) -> None:
         super().__init__(
             eyes=eyes,

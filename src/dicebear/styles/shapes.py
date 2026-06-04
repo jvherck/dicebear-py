@@ -59,13 +59,13 @@ class Shapes(StyleBase):
         CF88C49 = "#f88c49"
 
     def __init__(
-            self,
-            shape01: Shape01 | str | None = None,
-            shape02: Shape02 | str | None = None,
-            shape03: Shape03 | str | None = None,
-            shape1Color: Shape1Color | str | None = None,
-            shape2Color: Shape2Color | str | None = None,
-            shape3Color: Shape3Color | str | None = None,
+        self,
+        shape01: Shape01 | str | None = None,
+        shape02: Shape02 | str | None = None,
+        shape03: Shape03 | str | None = None,
+        shape1Color: Shape1Color | str | None = None,
+        shape2Color: Shape2Color | str | None = None,
+        shape3Color: Shape3Color | str | None = None,
     ) -> None:
         super().__init__(
             shape01=shape01,

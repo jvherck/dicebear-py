@@ -3,10 +3,10 @@ from __future__ import annotations
 import math
 from typing import TypedDict
 
-
 # ---------------------------------------------------------------------------
 # Range type (mirrors JS StyleDefinition.Range)
 # ---------------------------------------------------------------------------
+
 
 class _RangeRequired(TypedDict):
     min: float
@@ -20,6 +20,7 @@ class Range(_RangeRequired, total=False):
 # ---------------------------------------------------------------------------
 # Internal bit-manipulation helpers
 # ---------------------------------------------------------------------------
+
 
 def _to_int32(n: int) -> int:
     """Reinterpret the lower 32 bits of n as a signed 32-bit integer (JS `| 0`)."""
@@ -36,6 +37,7 @@ def _imul32(a: int, b: int) -> int:
 # FNV-1a 32-bit hash
 # ---------------------------------------------------------------------------
 
+
 def _fnv1a(text: str) -> int:
     """
     FNV-1a 32-bit hash over UTF-16 code units.
@@ -43,7 +45,7 @@ def _fnv1a(text: str) -> int:
     Iterates utf-16-le code units (2 bytes each) so surrogate pairs for
     supplementary characters are hashed separately — identical to JS charCodeAt().
     """
-    encoded = text.encode('utf-16-le')
+    encoded = text.encode("utf-16-le")
     hash_ = 0x811C9DC5
     for i in range(0, len(encoded), 2):
         code_unit = encoded[i] | (encoded[i + 1] << 8)
@@ -54,12 +56,13 @@ def _fnv1a(text: str) -> int:
 
 def _fnv1a_hex(text: str) -> str:
     """FNV-1a hash as an 8-character lowercase hex string."""
-    return format(_fnv1a(text), '08x')
+    return format(_fnv1a(text), "08x")
 
 
 # ---------------------------------------------------------------------------
 # Mulberry32 PRNG
 # ---------------------------------------------------------------------------
+
 
 class Mulberry32:
     """
@@ -104,6 +107,7 @@ class Mulberry32:
 # Key-based PRNG
 # ---------------------------------------------------------------------------
 
+
 class Prng:
     """
     Key-based deterministic PRNG.
@@ -117,7 +121,7 @@ class Prng:
 
     def get_value(self, key: str) -> float:
         """Return a float in [0, 1) derived from seed:key."""
-        return Mulberry32(_fnv1a(self._seed + ':' + key)).next_float()
+        return Mulberry32(_fnv1a(self._seed + ":" + key)).next_float()
 
     def pick(self, key: str, items: list) -> object | None:
         """
@@ -179,9 +183,9 @@ class Prng:
         With step > 0, draws uniformly from the discrete set of bucket values.
         Mirrors JS Math.round (round half toward +infinity) via floor(x + 0.5).
         """
-        min_ = min(range_['min'], range_['max'])
-        max_ = max(range_['min'], range_['max'])
-        step = range_.get('step') or 0
+        min_ = min(range_["min"], range_["max"])
+        max_ = max(range_["min"], range_["max"])
+        step = range_.get("step") or 0
 
         if step > 0:
             buckets = math.floor((max_ - min_) / step) + 1
@@ -198,8 +202,8 @@ class Prng:
 
         The step field (if present) is ignored — integers always step by 1.
         """
-        min_ = int(min(range_['min'], range_['max']))
-        max_ = int(max(range_['min'], range_['max']))
+        min_ = int(min(range_["min"], range_["max"]))
+        max_ = int(max(range_["min"], range_["max"]))
         return math.floor(self.get_value(key) * (max_ - min_ + 1)) + min_
 
     def shuffle(self, key: str, items: list) -> list:
@@ -213,7 +217,7 @@ class Prng:
             return list(items)
 
         result = sorted(_unique_by_repr(items), key=str)
-        prng = Mulberry32(_fnv1a(self._seed + ':' + key))
+        prng = Mulberry32(_fnv1a(self._seed + ":" + key))
 
         for i in range(len(result) - 1, 0, -1):
             j = math.floor(prng.next_float() * (i + 1))
@@ -225,6 +229,7 @@ class Prng:
 # ---------------------------------------------------------------------------
 # Internal utilities
 # ---------------------------------------------------------------------------
+
 
 def _unique_by_repr(items: list) -> list:
     """Deduplicate by str() representation, keeping the first occurrence."""

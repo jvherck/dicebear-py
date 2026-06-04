@@ -41,14 +41,14 @@ class Identicon(StyleBase):
         CE25A75 = "#e25a75"
 
     def __init__(
-            self,
-            row: Row | str | None = None,
-            row01: Row | str | None = None,
-            row02: Row | str | None = None,
-            row03: Row | str | None = None,
-            row04: Row | str | None = None,
-            row05: Row | str | None = None,
-            rowColor: RowColor | str | None = None,
+        self,
+        row: Row | str | None = None,
+        row01: Row | str | None = None,
+        row02: Row | str | None = None,
+        row03: Row | str | None = None,
+        row04: Row | str | None = None,
+        row05: Row | str | None = None,
+        rowColor: RowColor | str | None = None,
     ) -> None:
         super().__init__(
             row=row,

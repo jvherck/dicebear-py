@@ -62,14 +62,14 @@ class Rings(StyleBase):
         CF290A3 = "#f290a3"
 
     def __init__(
-            self,
-            ring: Ring | str | None = None,
-            ring01: Ring01 | str | None = None,
-            ring02: Ring02 | str | None = None,
-            ring03: Ring03 | str | None = None,
-            ring04: Ring04 | str | None = None,
-            ring05: Ring05 | str | None = None,
-            ringColor: RingColor | str | None = None,
+        self,
+        ring: Ring | str | None = None,
+        ring01: Ring01 | str | None = None,
+        ring02: Ring02 | str | None = None,
+        ring03: Ring03 | str | None = None,
+        ring04: Ring04 | str | None = None,
+        ring05: Ring05 | str | None = None,
+        ringColor: RingColor | str | None = None,
     ) -> None:
         super().__init__(
             ring=ring,

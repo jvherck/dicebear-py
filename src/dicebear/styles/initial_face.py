@@ -39,13 +39,13 @@ class InitialFace(StyleBase):
         CFFFFFF = "#ffffff"
 
     def __init__(
-            self,
-            eyes: Eyes | str | None = None,
-            face: Face | str | None = None,
-            head: Head | str | None = None,
-            mouth: Mouth | str | None = None,
-            eyesColor: EyesColor | str | None = None,
-            mouthColor: MouthColor | str | None = None,
+        self,
+        eyes: Eyes | str | None = None,
+        face: Face | str | None = None,
+        head: Head | str | None = None,
+        mouth: Mouth | str | None = None,
+        eyesColor: EyesColor | str | None = None,
+        mouthColor: MouthColor | str | None = None,
     ) -> None:
         super().__init__(
             eyes=eyes,

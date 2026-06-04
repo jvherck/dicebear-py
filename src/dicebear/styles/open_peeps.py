@@ -153,18 +153,18 @@ class OpenPeeps(StyleBase):
         C694D3D = "#694d3d"
 
     def __init__(
-            self,
-            accessories: Accessories | str | None = None,
-            accessoriesProbability: int | None = None,
-            expression: Expression | str | None = None,
-            facialHair: FacialHair | str | None = None,
-            facialHairProbability: int | None = None,
-            head: Head | str | None = None,
-            mask: Mask | str | None = None,
-            maskProbability: int | None = None,
-            clothingColor: ClothingColor | str | None = None,
-            headContrastColor: HeadContrastColor | str | None = None,
-            skinColor: SkinColor | str | None = None,
+        self,
+        accessories: Accessories | str | None = None,
+        accessoriesProbability: int | None = None,
+        expression: Expression | str | None = None,
+        facialHair: FacialHair | str | None = None,
+        facialHairProbability: int | None = None,
+        head: Head | str | None = None,
+        mask: Mask | str | None = None,
+        maskProbability: int | None = None,
+        clothingColor: ClothingColor | str | None = None,
+        headContrastColor: HeadContrastColor | str | None = None,
+        skinColor: SkinColor | str | None = None,
     ) -> None:
         super().__init__(
             accessories=accessories,

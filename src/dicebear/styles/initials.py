@@ -23,10 +23,10 @@ class Initials(StyleBase):
         C000000 = "#000000"
 
     def __init__(
-            self,
-            initials: Initials | str | None = None,
-            letters: Letters | str | None = None,
-            textColor: TextColor | str | None = None,
+        self,
+        initials: Initials | str | None = None,
+        letters: Letters | str | None = None,
+        textColor: TextColor | str | None = None,
     ) -> None:
         super().__init__(
             initials=initials,

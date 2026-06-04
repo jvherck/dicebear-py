@@ -213,19 +213,19 @@ class BigEars(StyleBase):
         C89532C = "#89532c"
 
     def __init__(
-            self,
-            details: Details | str | None = None,
-            detailsProbability: int | None = None,
-            ears: Ears | str | None = None,
-            eyes: Eyes | str | None = None,
-            frontHair: FrontHair | str | None = None,
-            hair: Hair | str | None = None,
-            head: Head | str | None = None,
-            mouth: Mouth | str | None = None,
-            nose: Nose | str | None = None,
-            sideburns: Sideburns | str | None = None,
-            hairColor: HairColor | str | None = None,
-            skinColor: SkinColor | str | None = None,
+        self,
+        details: Details | str | None = None,
+        detailsProbability: int | None = None,
+        ears: Ears | str | None = None,
+        eyes: Eyes | str | None = None,
+        frontHair: FrontHair | str | None = None,
+        hair: Hair | str | None = None,
+        head: Head | str | None = None,
+        mouth: Mouth | str | None = None,
+        nose: Nose | str | None = None,
+        sideburns: Sideburns | str | None = None,
+        hairColor: HairColor | str | None = None,
+        skinColor: SkinColor | str | None = None,
     ) -> None:
         super().__init__(
             details=details,

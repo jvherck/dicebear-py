@@ -20,11 +20,11 @@ jobs:
       - name: Install dependencies
         run: pip install requests
 
-      - name: Fetch schemas from dicebear/styles
-        run: python scripts/fetch_schemas.py
+      - name: Fetch schemas from dicebear-styles
+        run: python -m pip install -U dicebear-styles
 
       - name: Generate style files
-        run: python scripts/generate.py
+        run: python scripts/generate_styles.py
 
       - name: Open PR with changes
         uses: peter-evans/create-pull-request@v7
@@ -36,6 +36,6 @@ jobs:
           body: |
             Automated style regeneration triggered manually via workflow_dispatch.
 
-            - Fetched latest JSONs from [dicebear/styles](https://github.com/dicebear/styles)
+            - Fetched latest styles from [dicebear-styles](https://pypi.org/p/dicebear-styles)
             - Regenerated all style files in `src/dicebear/styles/`
             - Regenerated `src/dicebear/styles/__init__.py`

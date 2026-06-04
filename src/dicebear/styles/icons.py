@@ -163,9 +163,9 @@ class Icons(StyleBase):
         CFFFFFF = "#ffffff"
 
     def __init__(
-            self,
-            icon: Icon | str | None = None,
-            iconColor: IconColor | str | None = None,
+        self,
+        icon: Icon | str | None = None,
+        iconColor: IconColor | str | None = None,
     ) -> None:
         super().__init__(
             icon=icon,
